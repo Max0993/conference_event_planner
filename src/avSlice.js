@@ -40,9 +40,7 @@ export const avSlice = createSlice({
 
   reducers: {
     incrementAvQuantity: (state, action) => {
-        /*const handleIncrementAvQuantity = (index) => {
-        dispatch(incrementAvQuantity(index));
-        };*/
+        
         const item = state[action.payload];
         if (item) {
             item.quantity++;
@@ -50,9 +48,7 @@ export const avSlice = createSlice({
     },
     
     decrementAvQuantity: (state, action) => {
-        /*const handleDecrementAvQuantity = (index) => {
-        dispatch(decrementAvQuantity(index));
-        };*/
+       
         const item = state[action.payload];
         if (item && item.quantity > 0) {
             item.quantity--;

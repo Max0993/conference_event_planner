@@ -134,11 +134,6 @@ const ConferenceEvent = () => {
                 }
               });
         }
-        /*const totalCosts = {
-            venue: venueTotalCost,
-            av: avTotalCost,
-            meals: mealsTotalCost,
-        };*/
     return totalCost;
     };
 
@@ -153,7 +148,11 @@ const ConferenceEvent = () => {
           }
         }
       }
-
+      const totalCosts = {
+        venue: venueTotalCost,
+        av: avTotalCost,
+        meals: mealsTotalCost,
+    };
     
     return (
         <>
@@ -260,11 +259,12 @@ const ConferenceEvent = () => {
                                         </div>
                                     </div>
                                 ))}
+                                </div>
                                 <div className="total_cost">Total Cost: {avTotalCost}</div>
                                 </div>
                                 
 
-                            </div>
+                            
 
                             {/* Meal Section */}
 
@@ -282,6 +282,7 @@ const ConferenceEvent = () => {
                                     min="1"
                                     />
                                 </div>
+                                
                                 <div className="meal_selection">
                                      {mealsItems.map((item, index) => (
                                             <div className="meal_item" key={index} style={{ padding: 15 }}>
@@ -303,12 +304,6 @@ const ConferenceEvent = () => {
                         </div>
                     ) : (
                         <div className="total_amount_detail">
-                            <h2 id="pre_fee_cost_display" className="price">
-                                ${total_amount}
-                            </h2>
-                            <div className="render_items">
-                                <ItemsDisplay />
-                            </div>
                             <TotalCost totalCosts={ totalCosts } ItemsDisplay={() => <ItemsDisplay items={ items } />} />
                         </div>
                         

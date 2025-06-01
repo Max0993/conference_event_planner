@@ -1,9 +1,5 @@
 // mealsSlice.js
 import { createSlice } from '@reduxjs/toolkit';
-/*import { toggleMealSelection } from "./mealsSlice";*/
-
-
-
 export const mealsSlice = createSlice({
   name: 'meals',
   initialState: [
